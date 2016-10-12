@@ -1,0 +1,358 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Raleway', sans-serif;
+  font-size: 20px;
+}
+
+.login {
+
+  background: url('GettyImages-516286103.jpg') fixed center no-repeat;
+  background-size: cover;
+  background-position: center;
+  margin: 0 auto;
+  height: 1000px;
+  margin-top: -40px;
+  color: white;
+  opacity: 0.9;
+
+}
+
+#idContainer{
+  margin-top: 30px;
+}
+
+.btn {
+  border: 1px solid #00802b !important;
+  border-radius: 5px !important;
+}
+
+.clearfix:after {
+ content: " ";
+ display: block;
+ height: 0;
+ clear: both;
+}
+
+/* HEADER & NAVIGATION ======================================= */
+header {
+  border: 1px solid black;
+  margin: 0 auto;
+  min-height: 60px;
+  padding: 0 20px;
+  background: #1a1a1a;
+  color: #fff;
+}
+
+.fixed-nav {
+  position: fixed;
+  right: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+header .logo {
+  float: left;
+}
+
+header .logo h1 {
+  margin: 10px 0;
+}
+
+header .logo h1 a {
+  text-decoration: none;
+  color: #ffffff;
+}
+header .logo h1 a:hover {
+  color: #00802b;
+}
+
+header .nav {
+  float: right;
+}
+
+header .nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+header .nav li {
+  float: left;
+}
+
+header .nav li a {
+  display: block;
+  text-align: center;
+  padding: 20px 40px;
+  text-decoration: none;
+  color: #fff;
+}
+
+header .nav li a:hover {
+  color: #00802b;
+}
+
+/* ARTICLE BODY ======================================= */
+.body-wrapper {
+  /*padding-top: 40px;*/
+}
+
+article {
+  margin: 0 auto;
+  width: 70%;
+  border: 1px solid #00802b;
+  border-radius: 5px;
+  padding: 20px;
+}
+
+/* FORM ======================================= */
+.form-left {
+  float: left;
+  width: 45%;
+  vertical-align: top;
+}
+
+.form-right {
+  float: right;
+  width: 45%;
+  vertical-align: top;
+}
+
+.form label {
+  display: block;
+}
+
+.form input {
+  display: block;
+  width: 95%;
+  padding: 5px 5px;
+  border: 1px solid #00802b;
+  border-radius: 5px;
+  font-size: 20px;
+  margin: 10px 0;
+}
+
+.form-control option:first-child {
+  color: red !important;
+}
+
+/* BOOTSTRAP STYLE HACK */
+.form-group {
+  margin-bottom: 0 !important;
+  width: 95% !important;
+}
+
+.form-control {
+  display: block !important;
+  border: 1px solid #00802b !important;
+  border-radius: 5px !important;
+  font-size: 20px !important;
+  margin: 10px 0 !important;
+  height: 40px;
+}
+
+#datetimepicker input.form-control {
+  margin: 0 !important;
+  border-right: none !important;
+  border-top-right-radius: 0 !important;
+  border-bottom-right-radius: 0 !important;
+
+}
+
+.input-group-addon {
+  border: 1px solid #00802b;
+  border-left: 1px solid #00802b !important;
+  cursor: pointer;
+}
+
+.dropdown-menu > table > th {
+  text-align: center;
+}
+
+/* END: BOOTSTRAP STYLE HACK */
+
+.form button {
+  cursor: pointer;
+  border: 1px solid black;
+  border-radius: 6px;
+  width: 60%;
+  margin-left: 20%;
+  font-size: 20px;
+  padding: 15px 20px;
+}
+
+.form button:hover {
+  color: #00802b;
+  background: #1a1a1a;
+}
+
+#friends-container {
+  width: 95%;
+  padding: 5px 5px;
+  border: 1px solid #00802b;
+  border-radius: 5px;
+  font-size: 20px;
+  margin: 10px 0;
+  height: 210px;
+  max-height: 210px;
+  overflow: auto;
+}
+
+#friends-container div {
+  padding: 5px 0;
+  border-bottom: 1px solid #1a1a1a;
+}
+
+#friends-container input {
+  display: inline-block;
+  width: 5%;
+}
+
+/* INVITE RESULTS PAGE  ========================================== */
+.invite-container {
+  height: 350px;
+  width: 400px;
+  border: 1px solid rgb(0,172,237);
+  border-radius: 6px;
+  margin-bottom: 8px;
+  padding: 16px;
+  font-family: 'Raleway', sans-serif;
+  font-size: 16px;
+  color: #fff;
+  background-color: #00802b;
+  display: inline-block;
+}
+
+.invite-iframe {
+  display: inline-block;
+}
+
+.meet {
+  font-family: 'Lato', sans-serif;
+  font-size: 20px;
+
+}
+
+.invite-container .invite-image {
+  display: inline-block;
+}
+
+.invite-image img {
+  border-radius: 6px;
+  height: 110px;
+  width: 110px;
+  margin-bottom: 10px
+}
+
+.invite-container .invite-details {
+  display: inline-block;
+  vertical-align: top;
+  margin-left: 16px;
+}
+
+.invite-details ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.invite-details ul li{
+  padding-bottom: 1px;
+}
+
+.invite-details .location-name {
+  font-size: 22px;
+  font-weight: bold;
+  font-family:  'Raleway';
+}
+
+.invite-details .location-name a {
+  text-decoration: none;
+  font-size: 26px;
+  font-weight: bold;
+  color:white;
+  font-family:  'Raleway';
+}
+
+.markers {
+    display: block;
+    margin: 8px 8px 5px 5px;
+    background-color: white;
+    border-radius: 6px;
+    font-size: 16px;
+    font-family: 'Raleway';
+    border: 2px solid rgb(0,172,237);
+}
+
+/* GOOGLE MAPS API  ============================================== */
+.map-container {
+  margin: 0 auto;
+  width: 1000px;
+}
+
+.map-container .loc-details-box,
+.map-container .map-box,
+.map-container .iframe-box {
+  float: left;
+  width: 32%;
+  vertical-align: top;
+  border: 1px solid #00802b;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+.loc-details-box {
+  height: 250px;
+  margin-right: 15px;
+  background: #1a1a1a;
+  color: white;
+}
+
+.loc-details-box ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.loc-details-box button {
+  color: #000;
+  margin-top: 30px;
+}
+
+.map-box {
+  height: 510px;
+  margin-right: 15px;
+}
+
+.iframe-box {
+  height: 510px;
+}
+
+#map {
+  /*height: 400px;
+  width: 900px;*/
+  height: 500px;
+  border: 1px solid #333;
+  border-radius: 5px;
+  margin-bottom: 5px;
+}
+
+/* Invites Page  ============================================== */
+#inviteHeader {
+  text-align: center;
+}
+
+.detail {
+  display: inline;
+  font-weight: bold;
+  font-size: 30px;
+}
+
+/* MEDIA QUERIES ==================================================*/
+@media (max-width: 1000px) {
+  .form-left, .form-right {
+    width: 48%;
+  }
+}

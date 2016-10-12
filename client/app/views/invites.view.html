@@ -1,0 +1,83 @@
+<!-- //*** Hardcoded -->
+<!-- //eventName
+//category
+//date -->
+
+<!-- //type
+//time
+//location -->
+<header class="clearfix" ng-controller="Nav">
+  <div class="logo">
+    <h1><a href="/#/">Meet.ly</a></h1>
+  </div>
+  <div class="nav">
+    <nav>
+      <ul>
+        <li ng-hide="isLoggedIn"><a href="#/login">Sign In</a></li>
+        <li ng-show="isLoggedIn"><a href="#/map-view">Welcome {{currentUser.name}}</a></li>
+        <li ng-show="isLoggedIn"><a href="#/invites">Your Invites</a></li>
+        <li ng-show="isLoggedIn"><a href="#/">Initiate Invite</a></li>
+        <li ng-show="isLoggedIn"><a href="#/signout">Sign Out</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+<article class="form-area">  
+  <h1 id = "inviteHeader"> Event: "{{invite.eventName}}" </h1>
+
+    <div class="form-left"        
+        
+        <h3>Meeting for: <div class = "detail">{{invite.category}} </div></h3>      
+
+        <h3>DATE & TIME</h3>
+        <!-- START: calendar -->
+        <!-- https://jqueryui.com/datepicker/ -->
+        <input type="text" name="selectInviteDate" value="" id="datepicker" ng-model="selectDate" placeholder="Invite Date">
+        <script>
+            $(function() {
+                $('#datepicker').datepicker();
+            });
+        </script>
+        <!-- END: calendar -->
+        
+        <!-- START: select time -->
+        <input type="text" name="" ng-model="inputTime" placeholder="Time">
+        <!-- END: select time -->        
+
+        <!-- START: location -->
+        <h4> Where you'll be: <h4>
+        <input class="location-box" type="text" name="location" ng-model="location" placeholder="e.g. 1216 Broadway, NYC">
+        <!-- END: location -->        
+
+    </div>
+
+    <div class="form-right">
+  
+    <!-- Select from type list
+  Todo: allow priority ranking -->
+      
+        <h4> Choose a type </h4>
+        <div id="friends-container">
+          <div ng-repeat="type in invite.type">
+            <input type="checkbox" value="{{type}}" ng-model="selectedTypes.selected[type]" ng-change="toggleCheckbox()"> {{type}}
+          </div>
+
+        </div>
+      
+
+
+        
+        <!-- START: submit form button -->
+        <!-- <button ng-click="submitForm({place: {f_category: invite.category, f_type: inputType, f_location: inputLocation}, dateTime: {f_date: selectDate, f_time: inputTime}, f_friends: [friendsInvite]})">INVITE!</button> -->
+
+        <!-- <button ng-click="submitForm({f_name: 'My Invite!', place: {f_category: 'Food', f_type: 'Mexican', f_location: '10001' }, dateTime: {f_date: '09/03/2016', f_time: '5:00pm'}, f_friends: [friendsInvite]})">INVITE!</button> -->
+  
+        <button ng-click="submitForm({f_name: invite.eventName, f_eventID:invite._id,  place: {f_category: invite.category, f_type: selectedTypes.selected, f_location: location}, dateTime: {f_date: eventDate, f_time: eventTime}, f_friends: invite.friends})">SUBMIT!</button>    
+
+
+        <!-- END: submit form button -->
+    </div>
+    <div style="clear:both;"></div>
+
+</article>
+
